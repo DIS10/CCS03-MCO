@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CCS03 MCO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="CCS03 MCO" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- 
+	Default Theme Style 
+	You can change the style.css (default color purple) to one of these styles
+	
+	1. pink.css
+	2. blue.css
+	3. turquoise.css
+	4. orange.css
+	5. lightblue.css
+	6. brown.css
+	7. green.css
+
+	-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="css/style.css">
+	<!-- End demo purposes only -->
+
+
+	<style>
+	/* For demo purpose only */
+	
+	/* For Demo Purposes Only ( You can delete this anytime :-) */
+	#colour-variations {
+		padding: 10px;
+		-webkit-transition: 0.5s;
+	  	-o-transition: 0.5s;
+	  	transition: 0.5s;
+		width: 140px;
+		position: fixed;
+		left: 0;
+		top: 100px;
+		z-index: 999999;
+		background: #fff;
+		/*border-radius: 4px;*/
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	#colour-variations.sleep {
+		margin-left: -140px;
+	}
+	#colour-variations h3 {
+		text-align: center;;
+		font-size: 11px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: #777;
+		margin: 0 0 10px 0;
+		padding: 0;;
+	}
+	#colour-variations ul,
+	#colour-variations ul li {
+		padding: 0;
+		margin: 0;
+	}
+	#colour-variations li {
+		list-style: none;
+		display: inline;
+	}
+	#colour-variations li a {
+		width: 20px;
+		height: 20px;
+		position: relative;
+		float: left;
+		margin: 5px;
+	}
+	#colour-variations li a[data-theme="style"] {
+		background: #6173f4;
+	}
+	#colour-variations li a[data-theme="pink"] {
+		background: #f64662;
+	}
+	#colour-variations li a[data-theme="blue"] {
+		background: #2185d5;
+	}
+	#colour-variations li a[data-theme="turquoise"] {
+		background: #00b8a9;
+	}
+	#colour-variations li a[data-theme="orange"] {
+		background: #ff6600;
+	}
+	#colour-variations li a[data-theme="lightblue"] {
+		background: #5585b5;
+	}
+	#colour-variations li a[data-theme="brown"] {
+		background: #a03232;
+	}
+	#colour-variations li a[data-theme="green"] {
+		background: #65d269;
+	}
+
+	.option-toggle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 5px;
+		margin-right: -30px;
+		width: 30px;
+		height: 30px;
+		background: #f64662;
+		text-align: center;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		color: #fff;
+		cursor: pointer;
+		-webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+	}
+	.option-toggle i {
+		top: 2px;
+		position: relative;
+	}
+	.option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+		color:  #fff;
+		text-decoration: none;
+		outline: none;
+	}
+	</style>
+	<!-- End demo purposes only -->
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		          	<a class="navbar-brand" href="index.html">MAT01 MCO</a> 
+		        </div>
+		        
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+
+		<div class="owl-carousel owl-carousel-fullwidth">
+			<!-- You may change the background color here. -->
+		    <div class="item" style="background: #352f44;">
+		    	<div class="container" style="position: relative;">
+		    		<div class="row">
+					    <div class="col-md-5 col-sm-5">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead to-animate">Trend Music</h1>
+									<h2 class="fh5co-sub-lead to-animate">A music app coded in Java with the JavaFX GUI Library
+									</h3>
+
+									
+						    	</div>
+						    </div>
+					    </div>
+					    <div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+					    	<div class="iphone to-animate-2"><img src="images/app.png" alt="Free HTML5 Template by FREEHTML5.co" style="width:150%; max-width:200%"></div>
+					    </div>
+
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="item" style="background-image:url(images/slide_5.jpg)">
+		    	<div class="overlay"></div>
+		    	<div class="container" style="position: relative;">
+		    		<div class="row">
+		    			<div class="col-md-8 col-md-offset-2 text-center">
+		    				<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+		    						<h1 class="fh5co-lead to-animate">Grab it now for free!</h1>
+									<h2 class="fh5co-sub-lead to-animate">100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a></h3>
+									<p class="to-animate-2"><a href="http://freehtml5.co/" target="_blank" class="btn btn-primary btn-lg">Download This Template</a></p>
+								</div>
+							</div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+
+		</div>
+	
+	<div id="fh5co-about-us" data-section="about">
+		<div class="container">
+			<div class="row row-bottom-padded-lg" id="about-us">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">About The App</h2>
+					<div class="row">
+						
+					</div>
+				</div>
+				<div class="col-md-8 to-animate">
+					<img src="images/app2.gif" class="img-responsive img-rounded" alt="Free HTML5 Template">
+				</div>
+				<div class="col-md-4 to-animate">
+					<h2>TREND Music App</h2>
+					<p>TREND Music is a music player app similar to iTunes. To use the app, you must login first with your account credentials. If you do not have an account, you can sign up using the Register button, adding your account to the database. You have the My Library tab containing all your music and the Shop tab containing music you can buy and add to your own library. The music in the Sop tab cannot be played, you must buy and add them to your library first so that they can be played.</p>
+					</p>
+				</div>
+			</div>
+			<div class="row" id="team">
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Team</h2>
+				</div>
+				<div class="col-md-12">
+					<div class="row row-bottom-padded-lg">
+						<div class="col-md-3 text-center to-animate">
+							<div class="person">
+								<img src="images/anton.jpg" class="img-responsive img-rounded" alt="Person">
+								<h3 class="name">Anton Quiambao</h3>
+								
+							</div>
+						</div>
+						<div class="col-md-3 text-center to-animate">
+							<div class="person">
+								<img src="images/neil.jpg" class="img-responsive img-rounded" alt="Person">
+								<h3 class="name">Jan Neil Pangan</h3>
+								
+							</div>
+						</div>
+						<div class="col-md-3 text-center to-animate">
+							<div class="person">
+								<img src="images/lau.jpg" class="img-responsive img-rounded" alt="Person">
+								<h3 class="name">Laurelle Limsingian</h3>
+								
+							</div>
+						</div>
+						<div class="col-md-3 text-center to-animate">
+							<div class="person">
+								<img src="images/alden.jpg" class="img-responsive img-rounded" alt="Person">
+								<h3 class="name">Alden Mojeno</h3>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-our-services" data-section="services">
+		<div class="container">
+			<div class="row row-bottom-padded-sm">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Source Code</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="box to-animate">
+						<img src="images/code1.png" class="img-responsive">
+					</div>
+					<div class="box to-animate">
+						<img src="images/code2.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="box to-animate">
+						<img src="images/code3.png" class="img-responsive">
+					</div>
+					<div class="box to-animate">
+						<img src="images/code4-1.png" class="img-responsive">
+						<img src="images/code4-2.png" class="img-responsive">
+						<img src="images/code4-3.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="box to-animate">
+						<img src="images/code5.png" class="img-responsive">
+						<img src="images/code5-1.png" class="img-responsive">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div id="fh5co-features" data-section="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-features-1">References</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 single-animate animate-features-2">
+							<h3>https://docs.oracle.com/javafx/</h3>
+							<h3>https://stackoverflow.com/</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	
+	
+	<!-- For demo purposes Only ( You may delete this anytime :-) 
+	<div id="colour-variations">
+		<a class="option-toggle"><i class="icon-gear"></i></a>
+		<h3>Preset Colors</h3>
+		<ul>
+			<li><a href="javascript: void(0);" data-theme="style"></a></li>
+			<li><a href="javascript: void(0);" data-theme="pink"></a></li>
+			<li><a href="javascript: void(0);" data-theme="blue"></a></li>
+			<li><a href="javascript: void(0);" data-theme="turquoise"></a></li>
+			<li><a href="javascript: void(0);" data-theme="orange"></a></li>
+			<li><a href="javascript: void(0);" data-theme="lightblue"></a></li>
+			<li><a href="javascript: void(0);" data-theme="brown"></a></li>
+			<li><a href="javascript: void(0);" data-theme="green"></a></li>
+		</ul>
+	</div>
+	End demo purposes only -->
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="js/jquery.style.switcher.js"></script>
+	<script>
+	$(function(){
+		$('#colour-variations ul').styleSwitcher({
+			defaultThemeId: 'theme-switch',
+			hasPreview: false,
+			cookie: {
+	          	expires: 30,
+	          	isManagingLoad: true
+	      	}
+		});	
+		$('.option-toggle').click(function() {
+			$('#colour-variations').toggleClass('sleep');
+		});
+	});
+	</script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
